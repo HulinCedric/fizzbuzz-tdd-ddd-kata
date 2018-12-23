@@ -3,11 +3,14 @@ using Xunit;
 
 namespace FizzBuzz.Tests
 {
-    public class FizzBuzzTests
+    public class FizzBuzzAnalyzerTests
     {
         [Fact]
-        public void FirstTest()
+        public void ShouldNotBeNull()
         {
+            var analyzer = new Analyzer();
+
+            Assert.NotNull(analyzer);
         }
     }
 }
