@@ -22,5 +22,15 @@ namespace FizzBuzz.Tests
 
             Assert.Equal("1", result);
         }
+
+        [Fact]
+        public void ShouldReturn100WhenAnalyze100()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(100);
+
+            Assert.Equal("100", result);
+        }
     }
 }

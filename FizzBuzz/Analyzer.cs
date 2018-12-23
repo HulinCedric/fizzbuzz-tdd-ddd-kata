@@ -6,6 +6,6 @@ namespace FizzBuzz
         {
         }
 
-        public string Analyze(int value) => "1";
+        public string Analyze(int value) => value.ToString();
     }
 }
