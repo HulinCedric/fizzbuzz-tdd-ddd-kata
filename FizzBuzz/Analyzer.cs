@@ -12,7 +12,7 @@ namespace FizzBuzz
             {
                 return "Fizz";
             }
-            else if (value == 5)
+            else if (value % 5 == 0)
             {
                 return "Buzz";
             }
