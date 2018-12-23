@@ -32,5 +32,13 @@ namespace FizzBuzz.Tests
 
             Assert.Equal("100", result);
         }
+
+        [Fact]
+        public void ShouldReturnFizzWhenAnalyze3()
+        {
+            var analyzer = new Analyzer();
+
+            Assert.Equal("Fizz", analyzer.Analyze(3));
+        }
     }
 }

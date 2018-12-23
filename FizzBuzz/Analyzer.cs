@@ -6,6 +6,14 @@ namespace FizzBuzz
         {
         }
 
-        public string Analyze(int value) => value.ToString();
+        public string Analyze(int value)
+        {
+            if (value == 3)
+            {
+                return "Fizz";
+            }
+
+            return value.ToString();
+        }
     }
 }
