@@ -5,5 +5,7 @@ namespace FizzBuzz
         public Analyzer()
         {
         }
+
+        public string Analyze(int value) => "1";
     }
 }

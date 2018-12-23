@@ -12,5 +12,15 @@ namespace FizzBuzz.Tests
 
             Assert.NotNull(analyzer);
         }
+
+        [Fact]
+        public void ShouldReturn1WhenAnalyze1()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(1);
+
+            Assert.Equal("1", result);
+        }
     }
 }
