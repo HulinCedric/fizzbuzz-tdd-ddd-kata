@@ -13,74 +13,62 @@ namespace FizzBuzz.Tests
             Assert.NotNull(analyzer);
         }
 
-        [Fact]
-        public void ShouldReturn1WhenAnalyze1()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(4)]
+        [InlineData(7)]
+        public void ShouldReturnTheNumberWhenAnalyzeNotMultiplesOf3And5(int value)
         {
             var analyzer = new Analyzer();
+            var expected = value.ToString();
 
-            var result = analyzer.Analyze(1);
+            var actual = analyzer.Analyze(value);
 
-            Assert.Equal("1", result);
+            Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void ShouldReturnFizzWhenAnalyze3()
+        [Theory]
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(9)]
+        [InlineData(12)]
+        public void ShouldReturnFizzWhenAnalyzeMultiplesOf3(int value)
         {
             var analyzer = new Analyzer();
 
-            var result = analyzer.Analyze(3);
+            var actual = analyzer.Analyze(value);
 
-            Assert.Equal("Fizz", result);
+            Assert.Equal("Fizz", actual);
         }
 
-        [Fact]
-        public void ShouldReturnBuzzWhenAnalyze5()
+        [Theory]
+        [InlineData(5)]
+        [InlineData(10)]
+        [InlineData(20)]
+        [InlineData(25)]
+        [InlineData(100)]
+        public void ShouldReturnFizzWhenAnalyzeMultiplesOf5(int value)
         {
             var analyzer = new Analyzer();
 
-            var result = analyzer.Analyze(5);
+            var actual = analyzer.Analyze(value);
 
-            Assert.Equal("Buzz", result);
+            Assert.Equal("Buzz", actual);
         }
 
-        [Fact]
-        public void ShouldReturnFizzWhenAnalyze6()
+        [Theory]
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(45)]
+        [InlineData(60)]
+        public void ShouldReturnFizzWhenAnalyzeMultiplesOf3And5(int value)
         {
             var analyzer = new Analyzer();
 
-            var result = analyzer.Analyze(6);
+            var actual = analyzer.Analyze(value);
 
-            Assert.Equal("Fizz", result);
-        }
-
-        [Fact]
-        public void ShouldReturnFizzBuzzWhenAnalyze15()
-        {
-            var analyzer = new Analyzer();
-
-            var result = analyzer.Analyze(15);
-
-            Assert.Equal("FizzBuzz", result);
-        }
-
-        [Fact]
-        public void ShouldReturnFizzBuzzWhenAnalyze30()
-        {
-            var analyzer = new Analyzer();
-
-            var result = analyzer.Analyze(30);
-
-            Assert.Equal("FizzBuzz", result);
-        }
-
-        [Fact]
-        public void ShouldReturnBuzzWhenAnalyze100()
-        {
-            var analyzer = new Analyzer();
-
-            var result = analyzer.Analyze(100);
-
-            Assert.Equal("Buzz", result);
+            Assert.Equal("FizzBuzz", actual);
         }
     }
 }
