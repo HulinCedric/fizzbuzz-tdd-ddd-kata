@@ -40,5 +40,13 @@ namespace FizzBuzz.Tests
 
             Assert.Equal("Fizz", analyzer.Analyze(3));
         }
+
+        [Fact]
+        public void ShouldReturnBuzzWhenAnalyze5()
+        {
+            var analyzer = new Analyzer();
+
+            Assert.Equal("Buzz", analyzer.Analyze(5));
+        }
     }
 }
