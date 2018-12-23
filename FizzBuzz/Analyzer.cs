@@ -13,7 +13,7 @@ namespace FizzBuzz
             var result = default(string);
             foreach (var rule in Rule.GetValues())
             {
-                if (number % rule.Value == 0)
+                if (rule.Check(number))
                 {
                     result += rule.Output;
                 }

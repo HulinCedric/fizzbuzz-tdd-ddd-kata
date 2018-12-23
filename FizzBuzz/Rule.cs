@@ -20,5 +20,7 @@ namespace FizzBuzz
             this.Value = value;
             this.Output = output;
         }
+
+        public bool Check(int number) => number % Value == 0;
     }
 }
