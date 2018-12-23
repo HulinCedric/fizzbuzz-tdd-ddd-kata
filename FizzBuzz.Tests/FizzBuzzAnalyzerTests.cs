@@ -24,16 +24,6 @@ namespace FizzBuzz.Tests
         }
 
         [Fact]
-        public void ShouldReturnBuzzWhenAnalyze100()
-        {
-            var analyzer = new Analyzer();
-
-            var result = analyzer.Analyze(100);
-
-            Assert.Equal("Buzz", result);
-        }
-
-        [Fact]
         public void ShouldReturnFizzWhenAnalyze3()
         {
             var analyzer = new Analyzer();
@@ -61,6 +51,36 @@ namespace FizzBuzz.Tests
             var result = analyzer.Analyze(6);
 
             Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void ShouldReturnFizzBuzzWhenAnalyze15()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(15);
+
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void ShouldReturnFizzBuzzWhenAnalyze30()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(30);
+
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void ShouldReturnBuzzWhenAnalyze100()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(100);
+
+            Assert.Equal("Buzz", result);
         }
     }
 }
