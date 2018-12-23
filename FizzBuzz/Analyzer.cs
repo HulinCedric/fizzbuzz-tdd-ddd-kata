@@ -6,22 +6,18 @@ namespace FizzBuzz
         {
         }
 
-        public string Analyze(int value)
+        public string Analyze(int number)
         {
-            if (value % 15 == 0)
+            var result = default(string);
+            if (number % 3 == 0)
             {
-                return "FizzBuzz";
+                result += "Fizz";
             }
-            else if (value % 3 == 0)
+            if (number % 5 == 0)
             {
-                return "Fizz";
+                result += "Buzz";
             }
-            else if (value % 5 == 0)
-            {
-                return "Buzz";
-            }
-
-            return value.ToString();
+            return result ?? number.ToString();
         }
     }
 }
