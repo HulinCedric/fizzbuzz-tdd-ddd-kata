@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 
 namespace FizzBuzz
 {
@@ -24,18 +25,20 @@ namespace FizzBuzz
 
         public static string Analyze(int number)
         {
-            var result = default(string);
+            var result = new StringBuilder();
             foreach (var rule in Rule.GetValues())
             {
-                if (rule.Check(number))
-                {
-                    result += rule.Output;
-                }
+                result.Append(rule.Check(number));
             }
 
-            return result ?? number.ToString();
+            if (result.Length == 0)
+            {
+                result.Append(number);
+            }
+
+            return result.ToString();
         }
 
-        private bool Check(int number) => number % Value == 0;
+        private string Check(int number) => number % Value == 0 ? Output : default(string);
     }
 }
