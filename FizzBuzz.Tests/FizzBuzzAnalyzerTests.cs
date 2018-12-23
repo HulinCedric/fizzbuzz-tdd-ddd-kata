@@ -38,7 +38,9 @@ namespace FizzBuzz.Tests
         {
             var analyzer = new Analyzer();
 
-            Assert.Equal("Fizz", analyzer.Analyze(3));
+            var result = analyzer.Analyze(3);
+
+            Assert.Equal("Fizz", result);
         }
 
         [Fact]
@@ -46,7 +48,19 @@ namespace FizzBuzz.Tests
         {
             var analyzer = new Analyzer();
 
-            Assert.Equal("Buzz", analyzer.Analyze(5));
+            var result = analyzer.Analyze(5);
+
+            Assert.Equal("Buzz", result);
+        }
+
+        [Fact]
+        public void ShouldReturnFizzWhenAnalyze6()
+        {
+            var analyzer = new Analyzer();
+
+            var result = analyzer.Analyze(6);
+
+            Assert.Equal("Fizz", result);
         }
     }
 }
